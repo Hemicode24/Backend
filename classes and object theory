@@ -1,0 +1,273 @@
+Classes and Objects:
+
+class : 
+- class is the blueprint of the object.
+- before creating any object, we 1st need to define the class
+- class contains all the related information.
+for ex.  House class contain all the details about floors,doors,windows etc. Based on this description we can build house and house is the object.
+
+object:
+- object is an instance of a class.
+- it is any entity that has a state and behaviour
+For ex. bicycle is an object. It has state: first gear, behaviour : braking, accelerating
+
+class Demo{
+	//Fields or properties
+	int rollNo;
+	
+	//constructor
+	
+	//methods
+	
+}
+
+Method:
+- reusability
+- better separation of code
+- easy to maintain
+
+access-modifier return-type methodName(parameters)
+{
+	//....
+}
+
+public void addNumbers(int a,int b)
+{
+	sop(a+b);
+}
+
+types:
+1.default method (with and without return)
+2.parameterized method (with and without return)
+
+1.create a class Area and calculate area of circle, square, rectangle and triangle
+2.create a class Arithmetic and perform all arithmetic operations, create separate method for each operation.
+
+Method Overloading(compile-time polymorphism):
+- same method name having different parameters
+
+ex. public void add(int a, int b,int c)
+	{
+		//...
+	}
+	public void add(double a, double b)
+	{
+		//...
+	}
+	
+	overload area() -> area of circle,area of triangle
+	
+	Constructor:
+	- used to initialize data member
+	- it has same name as class name
+	- it doesn't return anything
+	- constructor will called at the time of object creation
+	- 2types: default, parameterized
+	
+
+	Employee : id,name, workingDays,ratePerDay,salary. create both constructor and appropriate method.
+	Student : id,name,m1,m2,m3,total, percent. create both constructor and appropriate method.
+
+Q.
+	create a class Employee with the following data members and member functions.
+	Data members : empName,empCode, basicSalary, allowance, grossSalary, tax, netSalary
+	Member Functions :
+	void accept() : to input empName, empCode, basicSalary
+	void allow() : to calc and store allowance as 55% of basicSalary.  
+	void gross() : to calc and store grossSalary as sum of basicSalary and allowance
+	void tax() : to calc and store tax as 12% of grossSalary
+	void net() : to calc and store netSalary as grossSalary less tax.
+	void display() : to display salary slip containing empCode, empName, basicSalary, tax and netSalary
+	void main() : create an object of a class and execute all methods in logical order.
+	constructor : to declare all the data members to zero/nil.
+
+Q.
+create a class called Best with the following data members and member functions.
+	Data members : custName,phoneNo,number of calls, tax and bill.
+	Member Functions :
+	accept() : input custName, phoneNo and calls from user
+	billing() : calc bill amount based on the following condition
+	
+		Number of calls			Rate per call(Rs)
+		up to 100				nill
+		next 200				0.80
+		next 200				1.25
+		above 500				2.50
+		
+The program should add 12% service tax over the bill amount to get the final bill.
+
+
+Q.
+Write a program to accept depositor's name, principle amount and number of years from the user. Using function amount(), calculate the accumulated amount using the below formula,
+	a=p*(1+r/100)		Hint: Math.pow()
+a=accumulated amount, p=principle amount, r=rate of interest, n=no. of years
+value of p and n to be taken from the user, and depending on the value n, r to be calculated as per the following table-
+		No. of years			Rate of Interest
+		<1						9
+		>=1 but <=3				9.25
+		>3 but <=5				9.5
+		above 5					9.75
+		
+Q.
+Write a program to input a no from user and using a function called prime(), check and print whether the no. is prime number or not?
+
+
+HAS-A Relationship(Containment/Aggregation)
+relationship between entity and it's property
+Address : addrLine,street,city,state,country,pincode
+MyDate : dd,mm,yy
+Person : id,name,address,dob
+
+
+IS-A Relationship(Inheritance)
+relationship between different entities.
+Person : id,name,addr,phoneNo
+Employee : 
+
+Employee is a Person.
+Person is an Address.
+Person has an Address.
+
+Address : addrLine,street,city,state,country,pincode, display()
+Employee : id,name,dob,address
+Student : id,name,address,phoneNumber
+
+
+Inheritance : 
+- extends
+- super,super()
+
+Person(Base, Parent, Super class) <= Employee(Derived, child, sub class)
+
+super():must be 1st line of constructor,used to call super class constructor
+super:used to access data member or method
+
+Method Overriding : same method name having same parameter/signature,
+
+Types of Inheritance :
+1.Single-level Inheritance : 
+2.Multilevel
+3.Hierarchical
+
+
+Person - Employee
+Person - Student : 3subjects, total,percent, calculate():calc total and percent display():display id,name,dob,total,percent
+		 Grade:calculate():calc grade, display(): to display id,name,dob,total,percent,grade
+
+Q.
+Person(id,name,dob) <- Employee(workingDays,perDay,salary) <- SalesPerson(sales,commission)
+
+if sale 95% then commission 20% of salary
+		90% then commission 15% of salary
+		80% then commission 10% of salary
+		75% then commission 5% of salary
+		
+		calculate commision and total salary
+
+Q.
+Person <- Customer(prodName,quantity, price, billAmount) <- Discount 
+
+	if billAmount is 20000 or greater than then 15% discount on billAmount
+				15000 or more then 10% discount on billAmount
+				10000 or more then 7% discount on billAmount
+				below 10000 no discount.
+				
+				calculate discount and final bill.
+
+Package : 
+collection of classes, interfaces and subpackages
+
+subpackage : package within a package
+
+package package_name;
+
+import package_name.class_name;
+
+p1-Abc
+p2-p3-Xyz
+
+
+package p1;
+import p2.p3.*;
+class Abc{
+
+}
+
+you need to import subpackage explicitly.
+
+
+final keyword: 
+- can be used with a variable, method and a class
+
+final variable: you can not change the value of final variable.
+for ex. final float PI = 3.14f;
+		PI = 2.45f;  //error
+
+final method: can not be Overriden
+
+final class : can not be inherited
+
+static keyword:
+- can be use with a variable, method and a block
+
+static variable:
+- can be used to refer the common property of all objects.For ex. company name of employees, college name of students etc
+- static variable gets memory only once in a class area at the time of class loading.
+- it makes your program memory efficient
+- it shared to all objects
+
+
+Student:id,name,colName
+
+Student s1 = new Student(101,"abc");
+Student s2 = new Student(102,"xyz");
+
+static method:
+- it belongs to the class rather than object of a class.
+- it can be invoked without the need for creating an instance of a class.
+- it can access only static data member and can change value of it.
+- this and super can not be used in static context
+
+static block:
+- It is used to initialize the static data member.
+- it is executed before main() at the time of class loading.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

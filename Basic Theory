@@ -1,0 +1,749 @@
+Java Programming :
+
+- main purpose reusability.
+
+OOP principles : 
+1.Abstraction : showing only functionality and hiding internal details. Ex.phone,notepad,message delivery
+
+2.Encapsulation : wrapping up of data or binding data into a single unit.
+- You can acheive by using private fields and getter /setter methods
+
+For Ex. 
+class Student{
+	private int rollNo;
+	private String name;2qq
+	
+	public void setRollNo(int rollNo){}
+	
+	public int getRollNo(){
+		return rollNo;
+	}
+	
+	public void setName(String name){}
+	
+	public String getName()
+	{
+		return name;
+	}
+}
+
+class Marksheet{
+
+}
+
+3.Inheritance : properties of one class can be accessed by another class.
+Ex. Person : id,name,phoneNumber,address,email
+    Student :m1,m2,m3,percent,grade
+    Employee :desig,salary
+    Customer :prodDetails,orderDetails,bill
+    
+4.Polymorphism : poly :many  morphism:behaviors/forms
+- one name and many forms/ perform same task in different ways
+- there are 2 types:
+	1.Compile-time/static binding (Method Overloading)
+	2.Runtime/dynamic binding (Method Overriding)
+
+- Java is Platform Independent
+  .java -> compile -> .class(bytecode) -> any os
+  
+
+Data Types :
+1.short	- 2byte
+2.int - 4byte
+3.long - 8byte
+4.float - 4byte
+5.double - 8 byte
+6.boolean - 1bit
+7.char - 2byte 
+8.byte - 1 byte
+
+Operators :
+
+1.Arithmetic : +,-,*,/,%(modulus)
+
+2.Logical Operator : AND(&&), OR(||), NOT(!)
+
+AND : T T => T,		OR : T F=> T, F T=>T	NOT : T=>F, F=>T
+
+3.Relational Operator : >,<,>=,<=,==,!=
+= (assignment) ex. a=10;
+== (equality)  ex.(a==b)
+
+4.Assignment : +=, -=, *=, /=
+ex. a=a+b;  => a+=b;
+
+5.Increment/Decrement(++,--):
+pre-increment: ++a,	post-increment:a++
+pre-decrement: --a,	post-decrement:a--
+
+a=10,  a++ = 10
+	   a = 11
+	   
+	   
+a=10, 
+		a++ = 10	11
+		a++ = 11 	12
+		a-- = 12	11
+		++a = 12
+		--a = 11
+		a-- = 11	10
+		++a = 11
+		a++ = 11	12
+		--a = 11
+		a-- = 11	10
+		++a = 11
+		
+		
+Variable : storage area of data, used to allocate memory to store a value.
+syntax : datatype variableName;
+Ex.		 int rollNumber;   //declaration
+		 int rollNumber = 101;  //Initialization
+		 
+		 rules:
+		 - variable name must start with a letter, underscore(_) or dollar($).
+		 ex. int a1; int _a; int $a;
+		 
+		 - do not include any space in variable name.
+		 ex. int roll no; //invalid    int rollNumber;
+		 
+		 - do not include any special character in variable name except underscore or dollar.
+		 ex. int a#; //invalid  int a_; //valid
+		 
+		 - do not include any keywords in variable name.
+		 ex. int if;//invalid
+		 
+
+//Accepting values from a user
+1.Using Scanner class
+2.Using BufferedReader class
+
+
+1.Perform all Arithmetic operation and take input from user.
+2.Accept radius from user and calculate area of circle.(3.14*r*r)
+3.Accept base and height from user and calculate area of triangle(0.5*base*height)
+4.Accept principle amount, no. of years and rate of interest from user and calculate Simple Interest.
+5.Accept marks of any 3 subjects and calculate percentage.
+6.Calculate tax amount at 12% of the salary.
+
+Conditional Statement :
+if:
+	if(condition)
+	{
+		//...
+	}
+Ex. if(age>=18)
+	{
+		sop("eligible");
+	}
+
+if-else:
+	if(condition)
+	{
+		//....
+	}
+	else{
+		//
+	}
+
+Ladder if : 
+	if(condition)
+	{
+		//...
+	}
+	else if(condition)
+	{
+		//...
+	}
+	.
+	.
+	else{
+		//....
+	}
+Ex.	if(n>0)
+	{
+		sop("+ve");
+	}
+	else if(n<0){
+		sop("-ve");
+	}
+	else{
+		sop("zero");
+	}
+	
+nested if:
+	if(condition){
+		if(condition)
+		{
+			//...
+		}
+	}
+	else{
+		//...
+	}
+Ex.	if(p<35 || m<35 || c<35)	
+	{
+		sop("Fail");
+	}
+	else{
+		
+		if(per>=75)
+			sop("Distinction");
+		else if(per>=60)
+			sop("1st class");
+		else if(per>=45)
+			sop("2nd class");
+		else if(per>=30)
+			sop("pass class");
+		else
+			sop("Fail");
+	}
+	
+	1.Accept age from user and check whether the user is eligible for license or not?
+	2.Accept a number from user and check whether it is even or odd number
+	3.Accept 3 numbers from user and display maximum number.
+	4.Accept 3 numbers from user and check whether it is +ve, -ve or zero
+	5.Accept salary of a person and print tax amount. Tax is 10% if income is less than 25000 otherwise 15%
+	6.Accept purchase amount from the user and print discount amount. 10% discount on purchase if amount is 10000 otherwise 2% discount.
+	7.Accept number of calls from user and print bill amount. Rs.1 per call should be charged if no. of calls<200 otherwise Rs.3 per call.
+
+
+	if(age>=18)  //age=19>=18  true
+		sop("eligible");
+	else
+		sop("not eligible");
+		
+	
+	2. 
+	if(n%2==0)	
+		sop("even");
+	else
+		sop("odd");
+		
+3.	if(x>y && x>z)
+		sop("x is max");
+	else if(y>x && y>z)
+		sop("y is max");
+	else
+		sop("z is max");
+		
+
+5.	double salary,tax;
+	
+	if(salary<25000)
+		tax = salary*0.10;
+	else
+		tax = salary*0.15;
+		
+	sop(tax);
+	
+6.	float amount,discount;
+	if(amount>=10000)
+		discount = amount*0.10f;
+	else
+		discount = amount*0.02f;
+		
+	sop(discount);
+	
+7.	double noOfCalls,bill;
+	if(noOfCalls < 200)
+		bill = noOfCalls*1;
+	else
+		bill = noOfCalla*3;
+		
+	sop(bill);
+
+
+switch :(menu-driven program)
+
+switch(choice)
+{
+	case 1:......
+	break;
+	case 2:....
+	break;
+	.
+	.
+	.
+	case n:....
+	break;
+	default:...
+} 
+
+Ex. switch(choice)
+	{
+		case 1: sop("Monday");
+			break;
+		case 2: sop("Tuesday");
+			break;
+		.
+		.
+		case 7: sop("Sunday");
+			break;
+		default: sop("Invalid choice");
+	}
+
+1.Enter your choice.
+  cir to calculate area of circle
+  rect to calculate area of rectangle
+  tri to calculate area of triangle
+
+2. Accept any character from user and check whether it is vowel or consonent.
+
+
+Looping Structure:
+1.for loop :
+
+syntax:	for(initialization;condition;incr/decre)
+		{
+		//....
+		}
+Ex.		//print 1-10 numbers
+		for(int i=1;i<=10;i++)
+		{
+			sop(i);
+		}
+		//logic
+		i=1<=10	true	1
+		i=2<=10 true	2
+		i=3<=10 true	3
+		....
+		i=10<=10 true	10
+		i=11<=10 false
+
+2.while loop : entry-controlled loop
+syntax:	while(condition)
+		{
+		//.....
+		}
+Ex.		print 1-10 numbers
+		int i = 1;
+		while(i<=10)
+		{
+			sop(i);
+			i++;
+		}	
+		
+3.do-while loop : exit-controlled loop
+syntax:	do
+		{
+		//....
+		}
+		while(condition);	
+ex.		print 1-10
+		int i=1;
+		do{
+			sop(i);
+			i++;
+		}		
+		while(i<=10);
+		
+1.Print your name 5 times.
+2.print sum of 1st 10 natural numbers.
+3.print factorial of a given number
+4.print 25-50 odd numbers.
+5.print sum of even numbers, take range from user
+6.print multiplication table of a given number
+7.print fibonacci series.
+
+2. 1+2+3+4...+10
+
+3. 
+5! = 5*4*3*2*1 = ?
+
+int f=1;
+for(int i=1;i<=n;i++)
+{
+	f = f * i;
+}
+
+
+
+
+
+
+
+
+Multiplication table
+5 = 5 * 1
+10= 5 * 2
+15= 5 * 3
+.....
+50= 5*10
+	
+
+
+
+
+0	1	1	2	3	5	8
+
+fno = sno;
+sno = tno
+
+
+1.calculate sum of digit.
+2.accept a no from user and display reverse of it.
+3.accept a no from user and check whether it is palindrome number or not?
+4.accept a no from user and check whether it is armstrong number or not?
+
+1.n=123	o/p:6
+
+n=123/10	r=3	n=12
+n=12/10		r=2 n=1
+n=1/10		r=1 n=0
+n=0
+
+sum = sum + r;
+
+while(n>0)
+{
+	r = n%10;
+	sum=sum+r;
+	n = n/10;
+}
+
+n=123>0 true	r=123%10=3	sum = 0+3=3		n=123/10=12
+n=12>0  true	r=12%10=2	sum = 3+2=5		n=12/10=1
+n=1>0 true		r=1%10=1	sum = 5+1=6		n=1/10=0
+n=0>0 false
+
+2. n=123	o/p: 321
+
+3.palindrome:  n=123 r=321
+				n=121 r=121
+				
+4.armstrong: 
+153 = 1+125+27 
+	= 153
+	
+	
+	break and continue :
+	break : terminate the loop
+	continue : skip the current iteration and continue from next iteration
+	
+1.Accept a number from user and check
+		1.whether it is even or odd
+		2.whether it is +ve,-ve or zero
+		3.whether it is palindrome number or not
+		4.whether it is armstrong number or not
+
+Array : collection of similar type of data
+
+array initialization:
+	int a[] = {5,2,14,6,20}
+	
+	a[0]=5,		
+	a[1]=2,
+	a[2]=14,
+	a[3]=6,
+	a[4]=20
+	
+	for(int i=0;i<a.length;i++)
+	{
+		sop(a[i]);
+	}
+
+	i=0<5 true a[0]=5,
+	i=1<5 true a[1]=2
+
+array declaration:
+	int a[] = new int[size];
+	
+	1.Accept array element from user and calculate sum of all array elements.
+	2.Accept array element from user and print only even elements.
+	3.Accept array element from user and calculate sum of even elements and product of odd elements.
+	4.Accept array element from user and display frequency of +ve, -ve and zeroes.
+	5.Accept array element from user and display highest and lowest element.
+	6.Accept array element from user and calculate avg of even and odd elements.
+	7.display all array elements in ascending order. 
+	8.Program to accept 10 array elements from user, print 1st 5 in ascending order and remaining in descending order.
+	9.Read rollNo and marks of 5 students and print them in descending order of marks.
+		Roll No.	Pradnya	Nithya	lakshmi	Sharan	Mary
+					1		2		3		4		5
+		Marks		65		58	    89	    42		76
+		
+		89		76		65		58		42
+		3		5		1		2		4
+		lakshmi Mary	Pradnya	Nithya	Sharan
+		
+		
+		
+		
+		rollNo[] = {1,2,3,4,5};
+		marks[] = {65,58,89,42,76};
+		
+		for(i=0;i<marks.length-1;i++)
+		{
+			for(j=i+1;j<marks.length;j++)
+			{
+				if(marks[i]<marks[j])
+				{
+					t = marks[i];
+					marks[i]=marks[j];
+					marks[j]=t;
+					
+					t1=rollNo[i];
+					rollNo[i]=rollNo[j];
+					rollNo[j]=t1;
+				}
+			}
+		}
+		
+		
+		
+		
+		
+
+	sum=0,prod=1
+	for()
+	{
+		if(a[i]%2==0)
+			sum = sum + a[i];
+		else
+			prod = prod * a[i];
+	}
+	
+	sum=0,sumOdd=0,eCount=0,oCount=0;
+	for()
+	{
+		if(a[i]%2==0)
+		{
+			eCount++;
+			sum = sum + a[i];
+		}	
+		else{
+			oCount++;
+			sumOdd = sumOdd + a[i];
+		}
+	}
+	sop("avg of even : "+(sum/eCount));
+	sop("avg of odd : "+(sumOdd/oCount));
+	
+	swap: 
+	a=10,b=20
+	t=a;	t=10
+	a=b;	a=20
+	b=t;	b=10
+	
+	Ascending order:
+	12 3 14 8 9		12>3 i>j
+	3 12 14 8 9		12>14 14>8
+	3 12 8 14 9		14>9
+	3 12 8 9 14		12>8
+	3 8 12 9 14		12>9
+	3 8 9 12 14
+		  i  j
+	
+	for(i=0;i<a.length-1;i++)
+	{
+		for(j=i+1;j<a.length;j++)
+		{
+			if(a[i]>a[j])
+			{
+				t=a[i];
+				a[i]=a[j];
+				a[j]=t;
+			}
+		}
+	}
+	for(i=0;i<a.length;i++)
+	{
+		sop(a[i]);
+	}
+	
+	Multi-dimentional array:
+	
+	initialization:
+	
+	int a[][] = {{1,2},{3,4}}; 
+	
+	a[0][0] = 1
+	a[0][1] = 2
+	a[1][0] = 3
+	a[1][1] = 4
+	
+	declaration:
+	
+	int a[][] = new int[rowsize][columnsize];
+	int a[][] = new int[2][2];
+	
+
+Print below Series:
+
+1.	1 3 5 7 9 ....n
+2.	1 4 9 16 25 ....n
+3.  1 8 27 64 ....n
+4.  1 9 25 49 ....n
+5.  1/1 + 1/2 + 1/3 +   + 1/n = ?
+6.  1/1 + 2/2 + 3/3 +...+ n/n = ?
+7.  1/1 + 2/4 + 3/9 + ...n/n = ?
+8.  1/2 + 2/3 + 3/4 + ... 10/11 = ?
+9.  1*2 + 2*3 + 3*4 + ... 15*16 = ?
+10. 1-2+3-4+5-6... n = ?
+11. 1/1! + 2/2! +  ... + n/n! = ?
+
+Q.A company manufactures 3 products namely computer stationary, fixed disks and computers. The following codes are used to indicate them
+			product					Code
+			Computer Stationary		1
+			Fixed disks				2
+			Computers				3
+			
+The company has a discount policy as follows:
+			Product					Order amount				discount rate
+			Computer stationary		$500 or more				12%
+			Computer stationary		$300 or more				8%
+			Computer stationary		below $300					2%
+			Fixed Disks				$2000 or more				10%
+			Fixed Disks				$1500 or more				5%
+			Computers				$5000 or more				10%
+			Computers				$2500 or more				5%
+			
+Calculate discount.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+Read the question carefully and follow the input and output format.
+
+Given the basic salary as input, write a program to calculate the bonus and display it.
+
+The bonus will be calculated based on the below category.
+Basic>20000 bonus=17%of basic+1500
+Basic>15000 bonus=15%of basic+1200
+Basic>10000 bonus=12%of basic+1000
+for rest =8%of basic+500
+
+Input and Output Format :
+
+First line of input consists of n, the basic salary.
+Output is a single integer that displays the bonus.
+
+Print "Number too large" when the given input numbers is greater than 32767 .
+Print "Number too small" when the given input is a negative number.
+
+Include a function named calculateBonus(int basic) whose return type is an integer, the bonus.
+
+Sample Input 1:
+21000
+
+Sample Output 1:
+5070
+
+Sample Input 2:
+327678
+Sample Output 2:
+Number too large
+	 
+		 
+Read the question carefully and follow the input and output format.
+
+A Sales person daily allowances calculated as follows .
+Item              Money (rupees)
+Shirt                   15
+Saree                 10
+other items          5
+
+Given an input array in which the first index represents no.of shirts sold, second index represents the no of sarees sold  and 
+the third index represents the other items sold for a particular day, Calculate the total allowances.
+
+Include a function named dailyAllowance(int items[], int size) that returns an integer, which is the total allowances.
+
+Business Rules:
+1) Print "Invalid array size" when size of the array is a negative number and terminate the program
+2) Print "Invalid item count" when there is any negative numbers available in the input array and terminate the program
+3) Print "Array size greater than 3"  when size of the array is greater than 3 and terminate the program.
+
+Input and Output Format :
+First line of input consists of n, the number of elements. Next n lines correspond to the array elements. Output consist of the total allowance.
+
+Sample Input 1:
+3
+10
+5
+10
+Sample Output 1:
+250
+
+Sample Input 2:
+4
+
+Sample Output 2:
+Array size greater than 3	 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

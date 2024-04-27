@@ -1,0 +1,81 @@
+Hibernate Framework:
+- Hibernate is a high performance object/relational persistence and query service
+- it is an open source and free to download
+- it is lightweight, ORM(Object Relational Mapping) tool
+- hibernate not only take care of mapping from java classes to database tables and from java datatype to sql datatypes but also provides db query and retrieval facility.
+- ORM tool simplifies data creation, data manipulation and data access.
+- it internally uses JDBC API to interact with the database.
+
+Advantages:
+1.Opensource and lightweight
+2.Fast Performance
+- Performance is fast because cache is internally used in hibernate
+- there are 2 types of cache, 1st level cache and 2nd level cache
+- 1st level cache is enabled by default.
+
+3.Database Independent Query:
+- Hibernate uses HQL(Hibernate Query Language) instead of SQL. HQL is Object Oriented version of SQL.
+- it generates database independent queries, you don't need to write database specific queries.
+- before hibernate if database is changed for the project,we need to change the sql query as well that leads to maintainance problem
+
+4.Automatic table creation:
+- provides facility to create tables automatically.
+
+5.Simplifies complex join:
+- to fetch data from multiple tables is easy in hibernate
+
+6.Query statistics and database support
+- it support query cache and provides statistic about query and database status.
+
+Hibernate Architecture:
+There are four layers, Java application layer, Hibernate Framework layer, Backend API layer and database layer
+
+Elements of Hibernate Architecture:
+
+SessionFactory:
+- it is factory of session and client of connection provider.
+- it holds 2nd level(optional) of data
+- org.hibernate.SessionFactory interface provides factory to get the object of session.
+
+Session:
+- provides interface between the application and data store in database
+- it wraps the JDBC connection and it is a factory of Transaction, Query and Criteria.
+- it holds 1st level cache(mandatory) of data.
+- it provides methods to insert, update and delete the object.
+
+Transaction:
+- provides methods for transaction management.ex.commit()
+
+ConnectionProvider:
+- it is factory of JDBC Connection
+- it abstract the application from DriverManager
+
+hibernate.cfg.xml: 
+location - src folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

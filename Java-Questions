@@ -1,0 +1,205 @@
+1.What is OOP? and principles of oop/ 4 major pillors?
+2.Why Java is platform independent?
+3.Why main() is static?
+4.instead of public static void main() can I write static public void main()
+5.Can we change variable name of command line arguments? can I write a instead of args?
+6.Can I change return type of main()?/ can I write int instead of void in main()?
+7.What is System, out and println in System.out.println()?
+8.Can we make class as a private or protected?
+9.Is Java 100%/pure OOP language?
+10.What is variable?
+11.What are data types?
+12.What are the types of variables?
+13.How to display below number upto 2 decimal point
+  float a = 123.768912 String.format("%.2f",a)
+14.What is class?
+15.what is object?
+16.What are the advantages of creating a method?
+17.What is constructor?
+18.What is difference between method and constructor?
+19.What is this keyword?
+20.What is this() constructor?
+21.What is super keyword?
+22.What is super() constructor?
+23.what is difference between super keyword and super()?
+24.What is Method Overloading?
+25.What is Method Overriding?
+26.What is difference between Method Overloading and Overriding?
+27.What is inheritance and explain it's types
+28.Why java doesn't support multiple inheritance
+29.What is difference between HAS-A and IS-A Relationship?
+30.What is package and subpackages?
+31.Can we import same package twice?
+32.What is default package of java?
+33.Can I write package stmt after import stmt?
+34.what is final keyword?
+35.what is static keyword?
+36.Can we execute a program without main()?
+37.In which memory area variable will be store?
+38.In which memory area object will be store?
+39.static variables will store in which memory area?
+40.Can we use this and super keyword in static context?
+41.Can we reuse static method? if yes how?
+42.Can we overload static method?
+43.difference between String and StringBuffer
+44.difference between StringBuffer and StringBuilder
+45.How to create a string?
+46.What is abstract class?
+47.What is an interface?
+48.difference between Abstract class and interface?
+49.What is Exception?
+50.What is the need to handle the Exception?
+51.What is the base class of Exception?
+52.What are the types of Exception?
+53.can we insert multiple catch block?
+54.What is the order of multiple catch blocks?
+55.What is the use of finally block?
+56.What is final, finally and finalize?
+finalize() : it is used to perform cleanup processing such as closing a file, closing a database connection etc. before garbage is collected. 
+57.In which situation finally will not be executed?
+58.Which exception should be declared?
+59.can we rethrow an exception?
+try{
+//...
+}
+catch(Exception e)
+{
+	throw new Exception("");
+}
+
+60.What is difference between throw and throws?
+61.What is custom exception?
+62.how to create custom exception?
+63.What is collection?
+64.What are the advantages of collection over Array?
+65.What are the disadvantages of array?
+66.What is the default capacity of ArrayList?
+67.What is the use of Iterator interface?
+68.What is Generic?
+69.What is difference between ArrayList and LinkedList?
+70.What is difference between Iterator and ListIterator?
+71.What is difference between ArrayList and Vector?
+72.What is difference between Comparable and Comparator?
+73.What is difference between Collection and Collections?
+74.What is difference between List and Set?
+75.What is difference between HashSet and LinkedHashSet?
+76.What is difference between PriorityQueue and ArrayDeque?
+77.What is difference between Set and Map?
+78.What is difference between HashSet and HashMap?
+79.What is difference between HashMap and Hashtable?
+80.How to get synchronized version of ArrayList/LinkedList?
+ans. by using synchronizedList(List list) of Collections class
+
+81.What is difference between Array and ArrayList?
+82.What is the use of Properties class?
+83.What are the types of file?
+84.What is difference between byte oriented and character oriented file?
+85.What is serialization and deserialization?
+86.What is Multi-processing?
+87.What is Multi-threading?
+88.What is thread?
+89.What is difference between process and thread?
+90.How to create a thread?
+91.Thread vs Runnable. Which is the best approach to create a thread?
+92.Explain thread life cycle.
+93.Can we start a thread twice? no, otherwise you will get IllegalThreadStateException
+94.can we set priority of thread?if yes how?
+95.What will happen if I pass a priority value other than 1-10?
+96.What is synchronization?
+97.What are the types of thread?
+98.Can you change user thread into Daemon thread?
+99.What is inter-communication/co-operation?
+100.What is difference between notify() and notifyAll()
+101.Why wait(). notify() and notifyAll() are present in Object class and not in a Thread class?
+ans.All these methods are related to lock and Object has lock.
+102.difference between sleep() and wait()?
+103.What is deadlock?
+ans.Deadlock can occur in a situation when a thread is waiting for an object lock that is acquire by another thread. And 2nd thread is waiting for 
+	an object lock that is acquire by 1st thread. Both threads are waiting for each other to release the lock. This condition is known as deadlock.
+104.What is Garbage Collector?
+105.How to call garbage collector explicitly?
+ans System.gc() / Runtime.gc()
+106.What is software testing?
+107.What is unit testing?
+108.What is test cases?
+109.What are the Advantages and features of unit testing?
+110.What is difference between manual and automated testing
+111.explain annotations used in JUnit
+112.what is assertion/assertion methods?
+113.Assertion methods are defined in which class?
+114.What are the features which got introduced in java8?
+115.What is lambda expression?
+116.What is functional interface?
+117.how lambda expression and functional interface are related?
+118.Can you create your own functional interface?
+119.What is method reference in java?
+120.What is optional?Why and how can you use it?
+121.What is Stream?
+122.What is difference between Collection and stream?
+123.What is difference between intermediate and terminal operation in stream?
+ans. Intermediate operations are lazy in nature and do not execute immediately, terminal operations are not lazy and they executed as soon as encountered
+     all intermediate operations returns stream as it just transform stream into another, terminal operation don't.
+     filter() is an intermediate operation and count() is terminal operation.
+124.What are the issues of old Date/Time API?
+125.Why constructor overriding is not possible?
+126.is default keyword one of the access-modifier?
+127.What is difference between protected and default?
+
+MySQL:
+1.What is database?
+2.What is DBMS?
+3.What is RDBMS? and how is it different from DBMS?
+4.What is SQL?
+5.What is difference between SQL and MySQL?
+6.What are table and fields?
+7.What is constraint?explain all constraint?
+8.What is primary key, unique key and foreign key?
+9.What is difference between unique and primary key?
+10.What is difference between primary key and composite key?
+11.What is join and types of join?
+12.What is query and subquery?
+13.what is difference between drop and truncate?
+14.What is difference between delete and truncate?
+15.What are aggregate functions?
+16.What is index? and explain it's types
+17.What is difference between clustered and non-clustered index?
+18.What is pattern matching?
+19.What are some common clauses used with select query?
+20.What is difference between Stored procedure and function?
+21.What is trigger?
+
+JDBC:
+1.What is JDBC?
+2.What are the steps to connect java and database?
+3.What are the different types of JDBC driver?
+4.What is difference between Statement and PreparedStatement
+5.What is the use of CallableStatement?
+6.Which method is used to establish connection between java and database?
+7.What is difference between executeQuery(), executeUpdate() and execute()?
+8.What are the types of Statement?
+9.What are the benefits of PreparedStatement over Statement?
+10.how can we execute stored procedure using CallableStatement?
+11.What is ResultSet and ResultSetMetaData?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

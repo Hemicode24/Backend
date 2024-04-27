@@ -1,0 +1,730 @@
+1.What will be the output of the following Java code?
+
+    class increment {
+        public static void main(String args[]) 
+        {        
+             int g = 3;
+             System.out.print(++g * 8);
+        } 
+    }
+    
+a) 32
+b) 33
+c) 24
+d) 25
+ans. a
+
+2.What will be the output of the following Java program?
+
+    class variable_scope 
+    {
+        public static void main(String args[]) 
+        {
+            int x;
+            x = 5;
+            {
+	        int y = 6;
+	        System.out.print(x + " " + y);
+            }
+            System.out.println(x + " " + y);
+        } 
+    }
+    
+    
+a) Compilation error
+b) Runtime error
+c) 5 6 5 6
+d) 5 6 5
+ans. a
+
+3.What will be the output of the following Java program?
+
+    class Output 
+    {
+        public static void main(String args[])
+        {
+            int arr[] = {1, 2, 3, 4, 5};
+            for ( int i = 0; i < arr.length - 2; ++i)
+                System.out.print(arr[i] + " ");
+        } 
+    }
+    
+a) 1 2 3 4 5
+b) 1 2 3 4
+c) 1 2
+d) 1 2 3 
+ans.  d
+
+4.
+class Demo {
+    public static void main(String args[]) {
+      for (int i =0; i <3; i++) {  //i=3
+        switch(i) {
+        case 0: break;
+        case 1: System.out.print("one ");
+        case 2: System.out.print("two ");
+        case 3: System.out.print("three ");
+        }
+        }
+        System.out.println("done");
+        }
+}
+
+A. done
+B. one two three done
+C. one two three two three done
+D. one two three one three one two done
+ans.C
+
+5. Find the output
+
+class Demo {
+    public static void main() {
+        int odd = 1;
+        if (odd) {
+            System.out.println("odd");
+        } else {
+            System.out.println("even");
+        }
+    }
+}
+A. odd
+B. even
+C. odd even
+D. Error
+ans. D
+
+6.Given:
+public class Calculator {
+ int num = 100; //instance
+ public void calc(int num) {
+ this.num = num * 10; 
+ }
+ public void printNum(){
+ System.out.println(num);
+ }
+ public static void main(String[] args) {
+ Calculator obj = new Calculator ();
+ obj.calc(2);
+ obj.printNum();
+ }
+}
+What is the result?
+A) 20
+B) 100
+C) 1000
+D) 2
+ans. A
+
+7.
+//line n1
+switch(cardVal){
+	case 4: case 5: case 6:
+	case7: case 8: sop("Hit");
+					break;
+	case 9: case 10: case 11:
+					sop("Double");
+					break;
+	case 15: case 16: sop("Surrender");
+					break;
+	default: sop("Stand");
+}
+Which 2 fragments can be inserted at line n1, independently, enable to print Stand?
+A. int cardVal = 6;
+B. int cardVal = 10;
+C. int cardVal = 14;
+D. int cardVal = 18;
+ans. C,D
+
+8.
+class Class1{String v1;}
+class Class2{
+	Class1 c1;
+	String v2;
+}
+class Class3{
+	Class2 c1;
+	String v3;
+}
+Which 3 options correctly described the relationship between the classes?
+A. Class2 has-a v3
+B. Class1 has-a v2
+C. Class2 has-a v2
+D. Class3 has-a v1
+E. Class2 has-a Class3
+F. Class2 has-a Class1
+ans.C,D,F
+
+9.What will happen if you try to compile and run the following code
+
+public class MyClass {
+	public static void main(String arguments[]) {
+		amethod(arguments);
+	}
+	public void amethod(String[] arguments) {
+		System.out.println(arguments);
+		System.out.println(arguments[1]);
+	}
+}
+1) error Can't make static reference to void amethod.
+2) error method main not correct
+3) error array must include parameter
+4) amethod must be declared with String
+ans. 1
+
+10.Which of the following are legal identifiers
+
+1) 2variable
+2) variable2
+3) _whatavariable
+4) _3_
+5)$anothervar
+6) #myvar
+ans. 2,3,4,5
+
+
+11.What will happen when you compile and run the following code?
+ 
+public class MyClass{
+static int i;
+public static void main(String a[]){
+System.out.println(i);
+}
+}
+1) Error Variable i may not have been initialized
+2) null
+3) 1
+4) 0
+ans.4
+
+
+12.Which of the following will compile without error
+
+1)
+
+import java.awt.*;
+package Mypackage;
+class Myclass {}
+
+2)
+
+package MyPackage;
+import java.awt.*;
+class MyClass{}
+
+3)
+
+/*This is a comment */
+package MyPackage;
+import java.awt.*;
+class MyClass{}
+ans.2,3
+
+13.
+Q.
+What will be the result of attempting to compile and run the following
+code?
+
+abstract class MineBase {
+	abstract void amethod();
+	static int i;
+}
+public class Mine extends MineBase {
+	public static void main(String argv[]){
+		int[] ar=new int[5];
+		for(i=0;i < ar.length;i++)
+		System.out.println(ar[i]);
+	}
+}
+1) a sequence of 5 0's will be printed
+2) Error: ar is used before it is initialized
+3) Error: Mine must be declared abstract
+4) IndexOutOfBoundes Error
+ans. 3
+
+14.
+Q.
+public class Test{
+	psvm(){
+		int x=10,y=2;
+		try{
+			for(int z=2;z>=0;z--){
+				int ans = x/z;
+				soprint(ans+" ");
+			}
+		}
+		catch(Exception e)
+		{
+			sop("E1");
+		}
+		catch(ArithmeticException e1)
+		{
+			sop("E2");
+		}
+	}
+}
+What is the result?
+A. E1
+B. E2
+C. 5 10 E1
+D. Compilation fails
+ans. D (In multi catch order must be most specific to most general)
+
+15.
+interface Rideable { String getGait(); }
+public class Camel implements Rideable {
+ int weight = 2;
+ String getGait() { return " mph, lope"; }
+ void go(int speed) {
+ ++speed; weight++;
+ int walkrate = speed * weight;
+ System.out.print(walkrate + getGait());
+ }
+ public static void main(String[] args) {
+ new Camel().go(8);
+ }
+}
+What is the result?
+A) 16 mph, lope
+B) 24 mph, lope
+C) 27 mph, lope
+D) Compilation fails.
+ans. D(getGait() is default, must declare it as public)
+
+Q.16
+Given:
+class Alpha {
+ String getType() {
+ return "alpha";
+ }
+}
+class Beta extends Alpha {
+ String getType() {
+ return "beta";
+ }
+}
+public class Gamma extends Beta {
+ String getType() {
+ return "gamma";
+ }
+ public static void main(String[] args) {
+ Gamma g1 = new Alpha();  
+ Gamma g2 = new Beta();
+ System.out.println(g1.getType() + " " + g2.getType());
+ }
+}
+What is the result?
+A) alpha beta
+B) beta beta
+C) gamma gamma
+D) Compilation fail
+ans.D(error due to downcasting, upcasting is allowed in java)
+upcasting : reference of parent and object of child Ex. Alpha g1 = new gamma();
+
+Q.17
+Given:
+abstract class Writer {
+ public static void write() {
+ System.out.println("Writing...");
+ }
+}
+class Author extends Writer {
+ public static void write() {
+ System.out.println("Writing book");
+ }
+}
+public class Programmer extends Writer {
+ public static void write() {
+ System.out.println("Writing code");
+ }
+ public static void main(String[] args) {
+ Writer w = new Programmer();
+ w.write();
+ }
+}
+What is the result?
+A) Writing...
+B) Writing book
+C) Writing code
+D) Compilation fails.
+ans. A
+
+Q.18.
+Given:
+class SuperClass {
+ SuperClass(int x) {
+ System.out.println("Super");
+ }
+}
+public class SubClass extends SuperClass {
+ SubClass() {
+ // Line n1
+ System.out.println("Sub 2");
+ }
+}
+Which statement, when inserted at Line n1, enables the code to compile?
+A) this(10);
+B) super(10);
+C) SuperClass(10);
+D) super.SuperClass (10);
+
+19.
+Q.
+Given:
+public interface MyInt {
+	 public void method1() {
+	 	System.out.println("method1");
+	 }
+	 default void method2() {
+	 	System.out.println("method2");
+	 }
+	 public static void method3() {
+	 	System.out.println("method3");
+	 }
+	 public abstract void method4();
+}
+Which statement is true?
+A) Only method4() compiles
+B) Only method2() and method4() compiles.
+C) Only method2(), method3(), and method4() compiles.
+D) MyInt.java compiles
+
+20.
+Given:
+11. interface DeclareStuff {
+12. public static final int EASY = 3;
+13. void doStuff(int t); }
+14. public class TestDeclare implements DeclareStuff {
+15. public static void main(String [] args) {
+16. int x = 5;
+17. new TestDeclare().doStuff(++x);
+18. }
+19. void doStuff(int s) {
+20. s += EASY + ++s;
+21. System.out.println("s " + s);
+22. }
+23. }
+What is the result?
+A. s 14
+B. s 16
+C. s 10
+D. Compilation fails.
+E. An exception is thrown at runtime.
+
+21.
+What is the output for the below code ?
+public class A {
+int k;
+ boolean istrue;
+ static int p;
+public void printValue() {
+System.out.print(k);
+System.out.print(istrue);
+System.out.print(p);
+}
+}
+public class Test{
+ public static void main(String argv[]){
+ 
+ A a = new A();
+ 
+ a.printValue();
+ }
+}
+Options are 
+A.0 false 0
+B.0 true 0
+C.0 0 0
+D.Compile error - static variable must be initialized before use.
+ans.A
+
+22.
+What is the output for the below code ?
+package com;
+public class Animal { 
+ public void printName(){
+ System.out.println("Animal");
+ }
+}
+package exam;
+import com.Animal;
+public class Cat extends Animal { 
+ public void printName(){
+ System.out.println("Cat");
+ }
+}
+package exam;
+import com.Animal;
+public class Test {
+public static void main(String[] args){
+ Animal a = new Cat();	//upcasting
+ a.printName(); 
+}
+}
+Options are 
+A.Animal
+B.Cat
+C.Animal Cat
+D.Compile Error
+
+ans.B
+
+23.
+What is the output for the below code ?
+public class A {
+ static{System.out.println("static");} 
+{ System.out.println("block");}
+public A(){
+System.out.println("A");
+}
+public static void main(String[] args){
+A a = new A();
+}
+
+Options are 
+A.A block static
+B.static block A
+C.static A
+D.A
+
+ans.B
+
+24.
+What is the output for the below code ?
+1. public class Test {
+2. public static void main(String[] args){
+3. int i = 010;
+4. int j = 07;
+5. System.out.println(i);
+6. System.out.println(j);
+7. }
+8. }
+Options are 
+A.8 7
+B.10 7
+C.Compilation fails with an error at line 3
+D.Compilation fails with an error at line 5
+Ans.A
+
+25.
+Q.
+//some code here line 31 
+try {
+//some code here line 33 } 
+catch (NullPointerException e1) {
+//some code here line 35 } 
+finally {
+//some code here line 37 }
+
+Under which three circumstances will the code on line 37 be executed? (Choose three.)
+A. The instance gets garbage collected. 
+B. The code on line 33 throws an exception. 
+C. The code on line 35 throws an exception. 
+D. The code on line 31 throws an exception. 
+E. The code on line 33 executes successfully.
+
+ans.B,C,E
+
+26.
+Given:
+public class Triangle {
+	static double area;
+	int b = 2, h = 3;
+	public static void main(String[] args) {
+		double p, b, h; // line1
+		if (area == 0) {
+			b = 3;
+			h = 4;
+			p = 0.5;
+			area = p * b * h; // line 2
+		}
+		System.out.println("Area is " + area);
+	}
+
+}
+
+What is the result?
+
+A. Area is 6.0
+B. Area is 3.0
+C. Compilation fails at line1
+D. Compilation fails at line2
+
+ans. A
+
+27.
+Given:
+public class Test {
+
+	public static void main(String[] args) {
+		int numbers[] = { 12, 13, 42, 32, 15, 156, 23, 51, 12 };
+		int[] keys = findMax(numbers);
+	}
+	/* line n1 */ {
+		int[] keys = new int[3];
+		/* logic goes here to find max numbers */
+		return keys;
+	}
+
+}
+
+Which method signature do you use at line number n1?
+
+A. public int findMax (int[] numbers)
+B. static int[] findMax (int[] max)
+C. static int findMax (int[] numbers)
+D. final int findMax (int[] )
+
+28.
+Given the below code:
+public class Test {
+
+	public static void main(String[] args) {
+		int answer;
+		try {
+			int num = 20;
+			int divisor = 0;
+			answer = num / divisor;
+
+		} catch (ArithmeticException ae) {
+			answer = 0; // line N1
+		} catch (Exception e) {
+			System.out.println("Invalid division");
+		}
+		System.out.println("Answer:" + answer);// Line N2
+	}
+
+}
+What is the result of above program?
+
+A. Answer = 0
+B. Invalid calculation
+C. Compilation fails only at line n1.
+D. Compilation fails only at line n2.
+E. Compilation fails at line n1 and line2
+
+Q.29
+//some code here line 31 
+try {
+//some code here line 33 } 
+catch (NullPointerException e1) {
+//some code here line 35 } 
+finally {
+//some code here line 37 }
+
+Under which three circumstances will the code on line 37 be executed? (Choose three.)
+A. The instance gets garbage collected. 
+B. The code on line 33 throws an exception. 
+C. The code on line 35 throws an exception. 
+D. The code on line 31 throws an exception. 
+E. The code on line 33 executes successfully.
+
+ans. BCE
+
+Q.30
+Given:
+public class Test {
+
+	public static void main(String[] args) {
+		int numbers[] = { 12, 13, 42, 32, 15, 156, 23, 51, 12 };
+		int[] keys = findMax(numbers);
+	}
+	/* line n1 */ {
+		int[] keys = new int[3];
+		/* logic goes here to find max numbers */
+		return keys;
+	}
+
+}
+
+Which method signature do you use at line number n1?
+
+A. public int findMax (int[] numbers)
+B. static int[] findMax (int[] max)
+C. static int findMax (int[] numbers)
+D. final int findMax (int[] )
+
+ans. B
+
+Q.31
+Given:
+10. class One {
+11. public One() { System.out.print(1); }
+12. }
+13. class Two extends One {
+14. public Two() { System.out.print(2); }
+15. }
+16. class Three extends Two {
+17. public Three() { System.out.print(3); }
+18. }
+19. public class Numbers{
+20. public static void main( String[] argv ) { new Three(); }
+21. }
+What is the result when this code is executed?
+A. 1
+B. 3
+C. 123
+D. 321
+E. The code runs with no output.
+
+ans.C
+
+Q.32
+Given the below three Java files
+
+A.java
+public class A {
+	public void a() {}
+	int a;
+}
+
+B.Java
+public class B {
+   private int doStuff() {
+	   private int x = 100;
+	   return x++;
+   }
+}
+
+C.Java in package : p1
+import java.io.*
+package p1;
+public class C {
+ public static void main(String[] args) {}
+}
+Which of the below options are correct
+
+A. Only the A.Java file compiles successfully.
+B. Only the B.java file compiles successfully.
+C. Only the C.java file compiles successfully.
+D. The A.Java and B.java files compile successfully.
+E. The B.java and C.java files compile successfully.
+F. The A.Java and C.java files compile successfully.
+
+ans. A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

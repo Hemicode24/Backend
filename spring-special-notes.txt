@@ -1,0 +1,284 @@
+spring boot---
+
+port---USB port-----port to exposed to client
+
+Server--web app-->Internet--> client
+
+java is a open soure platform ---community driven--daily update
+
+framework--use to enterprice application
+
+community framework-->hibernate, struts, spring, 
+
+[hibernate framework==db related 
+[struts frame work == free open source MVC framework, modern java web applications, it plugins to support REST, AJAX AND JSON. 
+[spring frame work == the spring framework provide a comprehensive program and configuration model for modern- java based enterprise application on- any kind of deployment platform.( eg: window, linux, maco) every window.
+
+(spring one of the part is spring boot) and spring boot is external service
+
+1..based application that you can "just run"
+2.. we take an opinionated view of the spring platform : 
+ 
+----spring boot is opinionated, spring boot is standalone, spring boot is production grade..
+
+Configuration: collection of jar files 
+> JAR file --> java Archive files --> zip files containing java class files
+--jar files is (.class files)
+> browser--> DB 
+
+web application -- war files
+
+(eg: windows 10 --linux mint browser )-- update the version in in every os---same conspet of the jar files in version is update in everyday
+
+
+Bill of materials--- bill of materials means elligned every  jar files version  collection .
+
+Hibernate - stuts - >spring is hittn--(spring integrates all othe framework like hibernate and struts )
+
+spring features:=======================
+
+1.. pojo-- class -- private variables--> getter setter methods 
+how to create pojo class > src > package > new > class --> name : ----- > finish
+
+eg: package ---;
+public class----{
+private int ----;
+private boolean----;
+private string name;
+}
+right click-- source-- generate Getters and setters---select all---public-- Generate.----pojo class is created .
+
+
+2... Dependency Injection
+
+3... REST API
+
+4.. MVC
+
+5.. Security
+---------------------------------------------------
+
+--Design patterns:  
+--two types MVC AND MVT
+
+--spring is MVC patterns it is model view controller
+
+MVC=[MODEL-----VIEW----CONTROLLER] eg: os is model, monitor is view, controller is keyboard. 
+
+-- REST API :
+API==  Application programming interface
+
+http Request (user name  password) --https response(xml, json) file format 
+
+state of an object --XML/JSON 
+Representation state transfer REST API 
+
+DB connection== create, read, update, delete(crud)--http methods 
+--create means post
+--read means GET
+--update means put 
+--delete means delete 
+----------------------------------------------------------
+
+Dependency injection :
+
+---> injecting object into other object (loose couping)
+
+fearute:
+1.. Avoids tight coupling 
+2.. @component, @Autowired, @Qualifier
+3.. (unit Testing, JUnit, NUnit )--Unit Testing will be easier one
+
+IDE--->STS(sPRING TOOL SUITE), INTELLIJ IDEA,
+--->Spring initializr ----spring project create in with dependency.
+
+design pattern --idea for project
+
+eg: coffee app-- coffe maker-- pump-- lazy coffee. heater-- themosiohon-- header.
+
+object dependency: object is bsnl
+
+class home
+{
+bsnl fibre = new bsnl();
+fibre. connect():
+}
+
+------------------------------------------------
+
+spring container : dependency injection 
+
+(@--Annotation)
+(Tightly coupling --hard coding)
+
+eg:
+
+@Component----spring container create a object in HOME
+
+class HOME
+
+@Autowired ----HOME AND BSNL is connected 
+@Qualifier ("bbb)---connect the bsnl 
+{
+
+NetConnection moderm ;
+
+home h = new home();
+
+}
+
+interface NetConnection
+{
+
+}
+@component(bbb)----> spring container create a object in BSNL
+ 
+class BSNL implements NetConnection
+{
+
+}
+@component (aaa)----> spring container create a object in Airtel
+ 
+class Airtel implements NetConnection
+{
+
+}
+------------------------------------
+
+Spring - server- client
+--server:web server in java-- ( apache tomcat, apache HTTP server, jetty, oracle, Niginx, Adobe JRun,...etc)--- installing software.
+
+--server: Apache Tomcat Server
+Tomcat Server Setup, Configuration -Spring Boot,
+--Auto configuration ( poi jar, war Files-20 -30, Configure Build path)
+
+--separate web server is not needed for springBoot.
+--No WAR files Configuration Management.
+--WAR FILES / JAR FILES
+--====JAR files download website(mvnrepository)
+
+------------------------------------------------------------------------
+how to create in spring project :
+
+1.file---2.new--3.projects--4.many type of project ( General, gradle, java, maven, plug-in Development, Spring boot....,etc)--i select maven Project --5. New maven project-->
+   1) u dont select create a sample project-in default location - show all catalogs -group id, artifact id version .--which you want use this- url http link .
+2) u click create a simple project and -next 
+
+6. new maven project 
+Artifact---------
+group id: group id means package name (-----eg:india.SBI)
+artifact id: project name (---- eg:Banking)
+version: default 
+package: [( java project-jar) pom, (war-web)]
+name:
+description:
+parent project(------- eg:india.RBI)
+group id: (-------EG: finance) 
+artifact id:
+version:
+
+how to create spring boot project
+-->new project-- select a wizard-- spring boot--spring starter project--next--new spring starter project--
+service URL :
+name:
+use default location:
+location:
+type :
+
+
+
+ 
+---------------------------------------------
+MAVEN: Knowledge  Accumulator
+Apahe maven is a software project management and comprehension tool. Based on the concept of a project object model (POM) , maven kcan management a project's build, reporting and documentation from a central piece of informat.
+
+VERSION:
+--oracle Jar 
+--Mysql jar
+--XLS jar
+--pom.XML JAR 
+
+
+DB(Oracal db, Mysql)
+
+---------------------------------------------
+
+
+Spring dependency injection
+spring web- for web application
+thyme leaf- for front end
+JPA - spring data JPA
+Spring boot actuator - for debugging 
+  <packing> war </packaging>
+.java--1> .class file 
+web application -->war
+------------------------------------------------------------
+
+src/main/java--
+com.project--
+--MyprojectApplication.java
+(@springBootApplication--spring tell jvm and jdk Iam spring application  that is @ springboot application)
+( context -- is create a object in configurableApplicationContext for spring boot )
+
+--servletinitializer.java
+
+-------------------------------
+Autoconfigiguration:
+--org.springframework.beans.factory.NoSuchBeanDefinition Exception 
+No qualifying bean of type
+com.example.dome.Home avaliable
+----------------------------------------
+springApplication.run(..)------doing in the work
+--set up default configuration
+--starts springn Applicationn Context 
+-- Starts Tomcat Server, stops
+--Class path Scan
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

@@ -1,0 +1,207 @@
+String : 
+ - present in java.lang.* package
+ - it implements Serializable, Comparable and CharSequence interfaces.
+ - string is a sequence of characters
+ - Java String is immutable i. e. it can not be changed
+ - There are 2 ways to create a String
+ 	1.String literal
+ 	2.By new keyword
+ 	
+ 	
+ 	1.String literal: String objects will store inside a special memory area known as a String Constant Pool.
+ 
+ 	
+ 	String s1 = "Welcome";
+ 	String s2 = "Welcome";
+ 	
+ 	- Each time you create a string literal, the JVM checks the String constant pool 1st.If the String already exist in the pool
+ 	  a reference to the pooled instance is returned.If string doesn't exist in the pool, a new string instance is created and placed in the pool
+ 	- it makes our program memory efficient.
+ 	
+ 	2.By new keyword :
+ 	
+ 	String str = new String("Welcome");
+ 	
+ 	- JVM will create a new String object inside heap memory
+ 	
+ 	Methods:
+ 	
+ 	String s1="Welcome", s2="Hello ", s3="welcome", s4="     Welcome to EduBridge       ";
+ 	
+ 	1.char charAt(int index): returns char value for the perticular index
+ 	ex. s1.charAt(3);	//c
+ 	
+ 	2.length(): returns String length
+ 	ex. s2.length();	//6
+ 	
+ 	3. String substring(int beginIndex): returns substring from a given index
+ 	ex. s1.substring(3);	//come
+ 	
+ 	4.String substring(int beginIndex, int endIndex):
+ 	ex. s3.substring(0,4);	//welc
+ 		s2.substring(1,3);	//el
+ 		
+ 	5.boolean contains(CharSequence): 
+ 	ex. s1.contains("x");	//false
+ 		s2.contains("H");	//true
+ 		
+ 	6.boolean equals(Object obj): 
+ 	ex. s1.equals(s3);	//false
+ 		s1.equals("Welcome");	//true
+ 		
+ 	7.boolean equalsIgnoreCase():
+ 	ex. s1.equalsIgnoreCase(s3);	//true
+ 	
+ 	8.boolean isEmpty(): 
+ 	ex. s4.isEmpty();	//false
+ 	
+ 	9.int indexOf(char ch): 
+ 	ex. s1.indexOf('e'); //1
+ 	
+ 	10.int indexOf(char ch,int fromIndex)
+ 	ex. s1.indexOf('e',2);	//6
+ 	
+ 	11.String concat(String str):
+ 	ex. s2.concat("abc");	//Hello abc
+ 	sop(s2);	//Hello 
+ 	
+ 	s2=s2.concat("abc");	//Hello abc
+ 	sop(s2);	//Hello abc
+ 	
+ 	12.String replace(char old,char new)
+ 	   String replace(String old,String new)
+ 	ex.s3.replace('e','a');		//walcoma
+ 	
+ 	13.String toUpperCase():
+ 	ex. s3.toUpperCase();	//WELCOME
+ 	
+ 	14.String toLowerCase():
+ 	ex. s2.toLowerCase();	//welcome
+ 	
+ 	15.String trim():removes leading and trailing whitespaces
+ 	ex. s4.length();
+ 		s4.trim();
+ 		s4.length();
+ 		
+ 	16.String[] split(" ");
+ 	ex. String s5 = "This is example of split";
+ 		String splitedStrings[] = s5.split(" ");
+ 		
+ 		splitedStrings[0]="This",
+ 		splitedStrings[1]="is",
+ 		splitedStrings[2]="example",
+ 		...
+ 	
+ 	
+ 	StringBuffer: Mutable
+ 	
+ 	StringBuilder
+ 	
+ 	difference between String and StringBuffer:
+ 	
+ 	- String is immutable, StringBuffer is mutable
+ 	- String is slow consumes more memory when you concat too many strings because every time it creates new instance.
+ 	  StringBuffer is fast and consumes less memory when you concat Strings
+ 	- String class overrides equals() of Object class, so you can compare 2 strings by equal()
+ 	  but StringBuffer class doesn't override equals() of object class
+ 	  
+ 	difference between StringBuffer and StringBuilder(1.5 version):
+ 	- StringBuffer is synchronized i.e. Thread safe but StringBuilder is non-synchronized i.e. not thread safe
+ 	- StringBuffer is less efficient but StringBuilder is more efficient.
+ 	
+ 	
+ 	1.Program to check whether given string is palindrome or not?
+ 	2.program to remove given character from the String
+ 	3.program to count number of words in a string
+ 	4.program to find out largest and smallest word in the String
+ 	5.program to count no. of vowels and consonent from a string
+ 	6.program to find the frequency of character from the string
+ 	7.program to determine whether 2 strings are anagram or not? 
+ 	
+ 	str=madam
+ 	rev=madam
+ 	
+ 	str = Priyanka
+ 	ch = r    hint:replace()
+ 	
+ 	
+ 	
+ 	Object class:
+ 	- it is parent class of all the classes in java by default. it means it is the topmost class of java.
+ 	- Object class is beneficial if you want to refer any object whose type you don't know
+ 	
+ 	
+ 	
+ 	Person <- Student
+ 	Person p = new Student();
+ 	
+ 	- parent class reference variable can refer the child class object, known as upcasting.
+ 	
+ 	Methods of Object class:
+ 	1. public final Class getClass() : returns the Class class object of this object
+ 	2.public int hashCode() : returns the hashcode number of the object.
+ 	3.public boolean equals(Object obj):   compares the given objects
+ 	4.protected Object clone() throws CloneNotSupportedException : creates and returns the exact copy of an Object
+ 	5.public String toString() : returns the string representation of an object
+ 	6.protected void finalize() throws Throwable : 
+ 	7.public final void notify():
+ 	8.public final void notifyAll():
+ 	9.public final void wait():
+ 	
+ 	-you need to implement java.lang.Cloneable interface, if you want clone an object, 
+ 	if you are not implementing this interface clone() will throw CloneNotSupportedException
+ 	
+ 	Wrapper classes:
+ 	int - Integer
+ 	float - Float
+ 	short - Short
+ 	long - Long
+ 	double - Double
+ 	boolean - Boolean
+ 	byte - Byte
+ 	char - Character
+ 	
+ 	java.lang.*;
+ 	
+ 	int a = 10;  //value - Object
+ 	
+ 	Integer j = Integer.valueOf(a);//before java5
+ 	Integer i = a;// from java5
+ 	
+ 	Autoboxing and unboxing: 
+ 	- The automatic conversion of primitive into object is known as Autoboxing and vice-versa Unboxing
+ 	ex. int a = 10;
+ 		Integer i = a; //int - Integer (Autoboxing)
+ 		
+ 	ex. Integer x = new Integer(20);
+ 		int y = x;  //Integer - int (Unboxing)
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	

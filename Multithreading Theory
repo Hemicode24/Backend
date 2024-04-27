@@ -1,0 +1,137 @@
+Multi-processing: one or more processes run simultaneously
+
+Multi-threading: Within a single process multiple threads run simultaneously. Ex.Garbage Collector, browser, word
+
+Thread:
+- lightweight subprocess, a smallest unit of processing
+- thread share a common memory area
+- they don't allocate separate memory, so saves memory
+- mostly used in games and animation
+- threads are independent, if exceptions occurs in one thread it doesn't affect other
+
+Difference between process and Thread:
+process:
+- can be reffered as program in execution
+- it has own memory address
+- heavyweight
+- do not depend on each other
+
+Thread:
+- part of process, lightweight subprocess
+- share same memory address
+- lightweight
+- they are not independent because they share same memory space
+
+- Threads are dependent on scheduling algorithms, so you can't say which thread will execute 1st.
+
+Thread Scheduler:
+- it is a part of JVM that decides which thread should run
+- there is no guarantee that which thread will be chosen to run
+- only 1 thread at a time can run in single process
+- scheduler mainly uses scheduling algorithms to schedule thread
+
+There are 2 ways to create a thread
+1.by extending Thread class
+2.by implementing Runnable interface
+
+class Abc extends XYZ implements interface
+{
+}
+
+Thread Life Cycle:
+1.New/Born : a thread is in new state if you create object of thread, but before invocation of start()
+
+2.Ready :After invocation of start(), thread will be in Ready state, a thread is ready to execute, 
+		it means it is not executing it is waiting for thread scheduler to pick
+
+3.Runnable/Running : if scheduler select any thread then thread will be in running stage
+
+4.Not Runnable : This is a state when thread is alive, but currently not eligible for execute.
+				ex.if you are calling sleep(500), then thread will be in not runnable state for 500 millis
+				
+5.Dead: thread is in dead/terminated state when thread exits after execution of run() or by calling stop()
+
+Synchronization:
+- capability to control the access of multiple threads to any shared resource.
+- better option when we want to allow only one thread to access the shared resource
+- There are 2 ways: 1.synchronized block	2.synchronized method
+
+synchronized(this)
+{
+	//....
+}
+
+Thread Priority:
+setPriority(int priority)
+
+- priority represented by a number between 1-10
+- where 1 is min priority, 10: max, 5: normal priority
+- default priority:5
+- 3 constants are available in Thread class
+		1.public static int MIN_PRIORITY
+		2.public static int MAX_PRIORITY
+		3.public static int NORM_PRIORITY
+
+join() : it causes currently running thread to stop executing until the thread it joins completes it's task
+
+Types of Threads:
+1.User Thread
+2.Daemon Thread
+
+User Thread : 
+- thread which is developed by java developers. ex. main thread
+- all threads created inside main() are by default non-daemon threads, because your main thread is non-daemon
+
+Daemon Thread:
+- low priority background threads which provides services to user thread
+- it's life depend on user thread. If no user thread is running then JVM can exit even if daemon threads are running
+- JVM doesn't wait for daemon thread to finish
+- you can change user thread to daemon thread by using setDaemon()
+
+Inter-thread communication/Co-operation:
+- it allows synchronized threads to communicate with each other
+- it is the mechanism in which thread is paused running in it's section and another thread is allowed to enter into same section to be executed
+- it is implemented by the following methods:
+	1.wait(): causes current thread to release the lock and wait until another thread invokes either notify() or notifyAll()
+	2.notify(): wakes up single thread that is waiting
+	3.notifyAll():wakes up all threads that are waiting
+
+
+Difference between sleep and wait:
+sleep:
+- present in Thread class
+- static method
+- after specific amount of time sleep is completed
+- doesn't release the lock
+
+wait:
+- present in Object class
+- non-static method
+- should be notified by notify() or notifyAll()
+- releases the lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

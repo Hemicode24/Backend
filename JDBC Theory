@@ -1,0 +1,107 @@
+JDBC : used to connect Java and Database
+
+driver - mysql-connector  - Type4 driver
+
+Java-database connectivity steps:
+1.import java.sql package
+
+2.Register driver
+Class.forName("driver name");
+
+3.Establish connection
+Connection con = DriverManager.getConnection(url,username,password);
+
+4.create Statement
+Statement stmt = con.createStatement();
+
+5.Execute Statement
+ResultSet rs = stmt.executeQuery("select * from employee");
+
+6.Retrieve Result
+while(rs.next())
+{
+	sop(rs.getInt("empId"));
+}
+
+7.close the connection
+stmt.close();
+con.close();
+
+
+stmt.executeQuery("insert into customer values(106,'Ajay','Pune','9008765432')");
+
+
+stmt.executeQuery("insert into customer values("+id+",'"+name+"','"+addr+"','"+phoneNo+"')"); //complex
+
+
+c=a+b;
+sop("Add : "+c)
+
+use PreparedStatement:
+prepareStatement("insert into customer values(?,?,?,?)");
+pstmt.setInt(1,id);
+pstmt.setString(2,name);
+pstmt.setString(3,addr);
+pstmt.setString(4,phoneNo);
+
+Statement:
+- used when query is to be executed only once
+- is base interface
+- used to execute normal sql query
+- we can't use statement for reading and writing binary data
+- performance is low
+
+
+PreparedStatement:
+- used when query is to be executed multiple times
+- sub interface of Statement
+- used to execute dynamic sql query
+- we can use PreparedStatement for reading and writing binary data
+- performance is better than Statement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
